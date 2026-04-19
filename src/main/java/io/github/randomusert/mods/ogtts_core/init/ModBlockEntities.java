@@ -1,6 +1,7 @@
 package io.github.randomusert.mods.ogtts_core.init;
 
 import io.github.randomusert.mods.ogtts_core.Ogtts_core;
+import io.github.randomusert.mods.ogtts_core.block.entities.StarForgeEntity;
 import io.github.randomusert.mods.ogtts_core.block.entities.TestUiBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -17,6 +18,14 @@ public class ModBlockEntities {
             () -> BlockEntityType.Builder.of(
                     TestUiBlockEntity::new,
                     ModBlocks.TEST_UI_BLOCK.get()
+            ).build(null)
+    );
+
+    public static final Supplier<BlockEntityType<StarForgeEntity>> STAR_FORGE_BLOCK_ENTITY = BLOCK_ENTITY_TYPES.register(
+            "start_forge_be",
+            () -> BlockEntityType.Builder.of(
+                    StarForgeEntity::new,
+                    ModBlocks.STAR_FORGE_BLOCK.get()
             ).build(null)
     );
 }

@@ -18,5 +18,6 @@ public class ModCreativeTabs {
                     .title(Component.translatable("creativetab.ogtts_core.ogtts"))
                     .displayItems((itemDisplayParameter, output) -> {
                         output.accept(ModBlocks.TEST_UI_BLOCK);
+                        output.accept(ModBlocks.STAR_FORGE_BLOCK);
                     }).build());
 }

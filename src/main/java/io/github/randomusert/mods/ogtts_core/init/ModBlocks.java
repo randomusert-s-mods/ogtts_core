@@ -1,6 +1,7 @@
 package io.github.randomusert.mods.ogtts_core.init;
 
 import io.github.randomusert.mods.ogtts_core.Ogtts_core;
+import io.github.randomusert.mods.ogtts_core.block.StartForgeBlock;
 import io.github.randomusert.mods.ogtts_core.block.TestUiBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TEST_UI_BLOCK = registerBlock("test_ui_block",
             () -> new TestUiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+
+    public static final DeferredBlock<Block> STAR_FORGE_BLOCK = registerBlock("start_forge",
+            () -> new StartForgeBlock(BlockBehaviour.Properties.of().explosionResistance(1000)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
