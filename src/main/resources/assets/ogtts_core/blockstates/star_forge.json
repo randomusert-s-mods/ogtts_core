@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ogtts_core:block/star_forge",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ogtts_core:block/star_forge"
+    },
+    "facing=south": {
+      "model": "ogtts_core:block/star_forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ogtts_core:block/star_forge",
+      "y": 270
+    }
+  }
+}

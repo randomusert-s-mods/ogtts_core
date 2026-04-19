@@ -20,7 +20,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TEST_UI_BLOCK = registerBlock("test_ui_block",
             () -> new TestUiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
 
-    public static final DeferredBlock<Block> STAR_FORGE_BLOCK = registerBlock("start_forge",
+    public static final DeferredBlock<Block> STAR_FORGE_BLOCK = registerBlock("star_forge",
             () -> new StartForgeBlock(BlockBehaviour.Properties.of().explosionResistance(1000)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

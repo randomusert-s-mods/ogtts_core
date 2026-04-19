@@ -22,7 +22,7 @@ public class ModBlockEntities {
     );
 
     public static final Supplier<BlockEntityType<StarForgeEntity>> STAR_FORGE_BLOCK_ENTITY = BLOCK_ENTITY_TYPES.register(
-            "start_forge_be",
+            "star_forge_be",
             () -> BlockEntityType.Builder.of(
                     StarForgeEntity::new,
                     ModBlocks.STAR_FORGE_BLOCK.get()
