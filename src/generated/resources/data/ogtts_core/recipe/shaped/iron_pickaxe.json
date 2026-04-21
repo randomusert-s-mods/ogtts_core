@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "C": {
+            "item": "ogtts_core:iron_core"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "pattern": [
+        "ICI",
+        " S ",
+        " S "
+    ],
+    "result": {
+        "count": 1,
+        "id": "minecraft:iron_pickaxe"
+    }
+}

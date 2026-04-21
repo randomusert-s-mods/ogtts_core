@@ -18,7 +18,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Ogtts_core.MODID);
 
     public static final DeferredBlock<Block> TEST_UI_BLOCK = registerBlock("test_ui_block",
-            () -> new TestUiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+            () -> new TestUiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).noLootTable()));
 
     public static final DeferredBlock<Block> STAR_FORGE_BLOCK = registerBlock("star_forge",
             () -> new StartForgeBlock(BlockBehaviour.Properties.of().explosionResistance(1000)));

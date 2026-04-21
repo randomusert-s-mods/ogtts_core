@@ -69,11 +69,19 @@ public class Ogtts_core {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
+
+
         if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
+        LOGGER.info("Mod is installed in a pack called" + Config.packName);
+
+        if (!Config.isInstalledInOgttsPack) {
+            LOGGER.info("The mod is not installed in OGTTS modpack for MC 1.21.1 Neoforge");
+        }
     }
 
 

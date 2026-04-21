@@ -27,12 +27,19 @@ public class Config {
     // a list of strings that are treated as resource locations for items
     private static final ModConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER.comment("A list of items to log on common setup.").defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
 
+    private static final ModConfigSpec.ConfigValue<String> PACK_NAME = BUILDER.comment("A pack name if you want to use this mod in YOUR pack. You still need permission").define("packName", "");
+
+    private static final ModConfigSpec.BooleanValue IS_INSTALLED_IN_OGTTS_PACK = BUILDER.comment("if this mod is actually installed in operation gregtech to space").define("isInstalledInOgttsPack", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     public static boolean logDirtBlock;
     public static int magicNumber;
     public static String magicNumberIntroduction;
     public static Set<Item> items;
+
+    public static String packName;
+    public static boolean isInstalledInOgttsPack;
 
     private static boolean validateItemName(final Object obj) {
         return obj instanceof String itemName && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse(itemName));
@@ -43,6 +50,8 @@ public class Config {
         logDirtBlock = LOG_DIRT_BLOCK.get();
         magicNumber = MAGIC_NUMBER.get();
         magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
+        packName = PACK_NAME.get();
+        isInstalledInOgttsPack = IS_INSTALLED_IN_OGTTS_PACK.get();
 
         // convert the list of strings into a set of items
         items = ITEM_STRINGS.get().stream().map(itemName -> BuiltInRegistries.ITEM.get(ResourceLocation.parse(itemName))).collect(Collectors.toSet());

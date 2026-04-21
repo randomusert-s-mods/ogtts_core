@@ -1,5 +1,19 @@
 {
   "creativetab.ogtts_core.ogtts": "Operation gregtech to space",
   "block.ogtts_core.star_forge": "Star Forge",
-  "gui.ogtts_core.star_forge.name": "Star Forge"
+  "gui.ogtts_core.star_forge.name": "Star Forge",
+  "tooltip.ogtts_core.iron_core": "Iron core that is required to craft iron tools",
+  "tooltip.ogtts_core.see_emi": "See EMI for more information",
+  "item.ogtts_core.iron_core": "Iron Core",
+  "tooltip.ogtts_core.iron_core.info": "Crafted from 8 Iron Ingots. Is used to craft iron tools",
+  "ogtts_core.configuration.title": "Operation Gregtech To Space core config",
+  "ogtts_core.configuration.isInstalledInOgttsPack.tooltip": "Is the core mod installed in the pack it is developed for originally",
+  "ogtts_core.configuration.magicNumber.tooltip": "",
+  "ogtts_core.configuration.section.ogtts.core.common.toml": "",
+  "ogtts_core.configuration.section.ogtts.core.common.toml.title": "",
+  "ogtts_core.configuration.items.button": "",
+  "ogtts_core.configuration.logDirtBlock.tooltip": "",
+  "ogtts_core.configuration.magicNumberIntroduction.tooltip": "",
+  "ogtts_core.configuration.items.tooltip": "",
+  "ogtts_core.configuration.packName.tooltip": "Modpack name config"
 }
