@@ -1,10 +1,7 @@
 package io.github.randomusert.mods.ogtts_core;
 
 import com.mojang.logging.LogUtils;
-import io.github.randomusert.mods.ogtts_core.init.ModBlockEntities;
-import io.github.randomusert.mods.ogtts_core.init.ModBlocks;
-import io.github.randomusert.mods.ogtts_core.init.ModCreativeTabs;
-import io.github.randomusert.mods.ogtts_core.init.ModItems;
+import io.github.randomusert.mods.ogtts_core.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -42,7 +39,7 @@ public class Ogtts_core {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "ogtts_core";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -56,6 +53,10 @@ public class Ogtts_core {
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TAB.register(modEventBus);
+
+
+        // Detect few mods
+        ModDetection.detectMods();
 
         NeoForge.EVENT_BUS.register(this);
 

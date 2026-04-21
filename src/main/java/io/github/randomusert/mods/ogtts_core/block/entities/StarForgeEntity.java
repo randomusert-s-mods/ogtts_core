@@ -43,6 +43,11 @@ public class StarForgeEntity extends BlockEntity {
         energy_bar.setProgress(0f);
         root.addChild(energy_bar);
 
+        var bar = new ProgressBar();
+        bar.setRange(0, 100);
+        bar.setProgress(0f);
+        root.addChild(bar);
+
         energy_bar.progressBarStyle(style -> style.fillDirection(FillDirection.DOWN_TO_UP));
 
         root.addChildren(
